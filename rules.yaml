@@ -1,0 +1,14 @@
+suspicious_keywords:
+  - powershell
+  - pwsh
+  - Invoke-WebRequest
+  - Invoke-Expression
+  - certutil
+  - bitsadmin
+  - rundll32
+  - mimikatz
+  - netsh
+  - netstat
+  - curl
+  - tasklist
+  - taskkill
