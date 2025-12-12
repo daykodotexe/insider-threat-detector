@@ -1,13 +1,18 @@
-# Insider Threat Detector
+# Insider Threat Detector v1.0
 
 A lightweight Windows-based monitoring tool that identifies potentially malicious activity by scanning running processes and analyzing command-line arguments using **psutil** and **YAML-based rules**.
 
 ## Features
 
 * Real‑time process scanning
-* Detection of suspicious commands (PowerShell, certutil, mimikatz, etc.)
+* Detection of 100+ suspicious commands (PowerShell, certutil, mimikatz, curl, bitsadmin, etc.)
+* Risk level classification: low / medium / high for each keyword
+* Whitelist support to reduce false positives (e.g., explorer.exe, chrome.exe)
+* Configurable scan interval (`SCAN_INTERVAL`)
+* Ctrl+C exits cleanly
 * JSON logging with timestamps (`logs/alerts.json`)
 * Easy to customize detection rules (`rules.yaml`)
+* Detection of encoded PowerShell commands
 * Fully Windows‑compatible
 
 ## Installation
@@ -37,7 +42,7 @@ pip install -r requirements.txt
 Run the detector:
 
 ```bash
-python main.py
+python src/main.py
 ```
 
 Alerts will appear in:
@@ -49,4 +54,21 @@ logs/alerts.json
 ## Custom Rules
 
 Modify `rules.yaml` to add or remove suspicious keywords.
-New keywords are detected automatically—no code changes needed.
+
+* Each keyword can have a risk level: low / medium / high
+* Changes take effect immediately on next scan
+* No code changes needed
+
+Example:
+
+```yaml
+suspicious_keywords:
+  - keyword: "mimikatz"
+    risk: "high"
+  - keyword: "netstat"
+    risk: "low"
+  - keyword: "powershell"
+    risk: "medium"
+```
+
+
