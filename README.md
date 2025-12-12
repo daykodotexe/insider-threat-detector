@@ -1,22 +1,52 @@
 # Insider Threat Detector
 
-Detect suspicious processes on Windows by scanning running processes and matching command-line keywords (psutil + yaml).
+A lightweight Windows-based monitoring tool that identifies potentially malicious activity by scanning running processes and analyzing command-line arguments using **psutil** and **YAML-based rules**.
 
 ## Features
-- Scans running processes in real-time
-- Detects suspicious commands like PowerShell, certutil, mimikatz, etc.
-- Logs alerts with timestamps to `logs/alerts.json`
-- Fully Windows-compatible
+
+* Real‑time process scanning
+* Detection of suspicious commands (PowerShell, certutil, mimikatz, etc.)
+* JSON logging with timestamps (`logs/alerts.json`)
+* Easy to customize detection rules (`rules.yaml`)
+* Fully Windows‑compatible
 
 ## Installation
-1. Clone the repo:
+
+### 1. Clone the repository
+
+```bash
 git clone <your-repo-url>
-Create and activate a virtual environment (optional but recommended):
+cd insider-threat-detector
+```
 
-bash
+### 2. (Optional) Create and activate a virtual environment
+
+```bash
 python -m venv .venv
-.venv\Scripts\Activate.ps1   # PowerShell
-Install dependencies:
+.venv\Scripts\Activate.ps1    # PowerShell
+```
 
-bash
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
+
+## Usage
+
+Run the detector:
+
+```bash
+python main.py
+```
+
+Alerts will appear in:
+
+```
+logs/alerts.json
+```
+
+## Custom Rules
+
+Modify `rules.yaml` to add or remove suspicious keywords.
+New keywords are detected automatically—no code changes needed.
