@@ -15,7 +15,7 @@ A lightweight Windows-based monitoring tool that identifies potentially maliciou
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/daykodotexe/insider-threat-detector.git
 cd insider-threat-detector
 ```
 
