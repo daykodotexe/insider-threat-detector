@@ -12,3 +12,109 @@ suspicious_keywords:
   - curl
   - tasklist
   - taskkill
+
+  - wmic
+  - sc.exe
+  - regsvr32
+  - mshta
+  - cmd.exe
+  - whoami
+  - systeminfo
+  - schtasks
+  - at.exe
+  - ftp
+  - tftp
+  - nc.exe
+  - ncat
+  - netcat
+  - nmap
+  - arp
+  - ipconfig
+  - ifconfig
+  - route
+  - tracert
+  - ping
+
+  - powershell -enc
+  - base64
+  - encodedcommand
+  - add-type
+  - IEX
+  - reflection
+  - downloadstring
+  - downloadfile
+
+  - python
+  - python3
+  - perl
+  - ruby
+  - php
+  - java
+
+  - ssh
+  - sftp
+  - openssl
+  - keygen
+  - sshpass
+
+  - msbuild
+  - installutil
+  - odbcconf
+  - reg.exe
+  - regedit
+  - winrm
+  - winrs
+  - wevtutil
+  - wscript
+  - cscript
+  - jscript
+  - rundll32.exe
+  - dllhost
+  - vssadmin
+  - bcdedit
+  - bootcfg
+  - diskshadow
+  - wmic process
+  - taskmgr
+  - procdump
+  - procexp
+  - handle.exe
+
+  - powershell.exe
+  - pwsh.exe
+  - cmdkey
+  - dsquery
+  - dsget
+  - dsadd
+  - dscache
+
+  - smbclient
+  - mount.cifs
+  - psexec
+  - psexec.exe
+  - winexe
+
+  - sqlcmd
+  - isql
+  - mysql
+  - mysqladmin
+
+  - wget
+  - invoke-shellcode
+  - shellcode
+  - inject
+  - remoteexec
+  - token
+  - privilege
+  - AdminSDHolder
+  - shadowcopy
+
+  - tcpview
+  - windump
+  - tcpdump
+  - packet
+  - sniff
+  - dump
+  - exfil
+  - lateral
+  - pivot
